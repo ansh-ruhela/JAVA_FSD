@@ -1,8 +1,8 @@
 package com.bank;
 
+
 public class Bank {
 	public final static String name = "Ansh Finance Ltd.";
-	private Customer customer;
 	public final static String ifsc = "ANSH01234";
 
 	static Customer getNewCustomerInstance(String name) {

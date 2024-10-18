@@ -2,7 +2,7 @@ package com.bank;
 
 import java.text.NumberFormat;
 
-public class Customer extends Bank {
+public class Customer {
 	public String name;
 	private Account account;
 
@@ -10,6 +10,7 @@ public class Customer extends Bank {
 		this.name = null;
 		this.account = null;
 	}
+
 	public String getName() {
 		return name;
 	}
@@ -22,8 +23,7 @@ public class Customer extends Bank {
 	public String toString() {
 		NumberFormat nf = NumberFormat.getCurrencyInstance();
 		return "{ Account Holder's Name = " + name + "\nAccount Number = " + account.getNumber() + "\nBalance = "
-				+ nf.format(account.getBalance())
-				+ " }\n";
+				+ nf.format(account.getBalance()) + " }\n";
 	}
 
 	public Account getAccount() {
