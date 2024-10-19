@@ -1,5 +1,6 @@
 package com.bank;
 
+import java.text.NumberFormat;
 
 public class Account {
 	private long number;
@@ -23,7 +24,11 @@ public class Account {
 
 	@Override
 	public String toString() {
-		return "{ Account Number = " + number + " Balance = xxxx" + " }\n";
+		String accountNumber = Main.resourceBundle.getString("accountNumber");
+		String availableBalance = Main.resourceBundle.getString("availableBalance");
+		NumberFormat numberFormat = NumberFormat.getCurrencyInstance(Main.locale);
+
+		return "{ " + accountNumber + number + ", " + availableBalance + numberFormat.format(balance) + " }";
 	}
 
 }

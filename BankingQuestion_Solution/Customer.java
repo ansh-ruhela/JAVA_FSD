@@ -21,9 +21,12 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		NumberFormat nf = NumberFormat.getCurrencyInstance();
-		return "{ Account Holder's Name = " + name + "\nAccount Number = " + account.getNumber() + "\nBalance = "
-				+ nf.format(account.getBalance()) + " }\n";
+		NumberFormat nf = NumberFormat.getCurrencyInstance(Main.locale);
+		String accountNumber = Main.resourceBundle.getString("accountNumber");
+		String availableBalance = Main.resourceBundle.getString("availableBalance");
+		String accountHolderName = Main.resourceBundle.getString("accountHolderName");
+		return "{ " + accountHolderName + name + ", " + accountNumber + account.getNumber() + ", " + availableBalance
+				+ nf.format(account.getBalance()) + " }";
 	}
 
 	public Account getAccount() {
@@ -36,6 +39,7 @@ public class Customer {
 
 	public void deposit(int amount) {
 		this.account.setBalance(this.account.getBalance() + amount);
+		System.out.println(account);
 	}
 
 	public void withdraw(int amount) {
@@ -44,6 +48,7 @@ public class Customer {
 		} else {
 			System.out.println("unsufficient fund balance please try a lower amount");
 		}
+		System.out.println(account);
 	}
 
 }
