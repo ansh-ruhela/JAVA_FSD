@@ -6,6 +6,11 @@ no of digits in 76 is 2
 last digit of 5776 is 76
 76 is automorphic : true
 
+$ java HappyNumber.java
+19
+19 is a happy number
+
+
 $ java KRotate.java
 Enter a number : 123456
 Enter rotation factor r : -1
