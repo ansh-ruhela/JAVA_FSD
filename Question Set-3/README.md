@@ -15,11 +15,15 @@ $ java HappyNumber.java
 19
 19 is a happy number
 
-
 $ java KRotate.java
 Enter a number : 123456
 Enter rotation factor r : -1
 123456 after -1 rotations = 234561
+
+$ java Keith.java
+Enter value of n : 197
+Enter how many terms to print : 10
+1, 9, 7, 17, 33, 57, 107, 197, 361, 665,
 
 $ java KeppsConstant.java
 enter a number : 1234
